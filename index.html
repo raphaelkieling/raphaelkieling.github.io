@@ -1,12 +1,565 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Raphael Kieling</title>
-</head>
-<body>
-    <h1>Welcome</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raphael Kieling - Lead Software Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      .dot-pattern {
+        background-image: radial-gradient(
+          rgba(0, 0, 0, 0.05) 1px,
+          transparent 1px
+        );
+        background-size: 20px 20px;
+      }
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+      .underline-animation {
+        position: relative;
+      }
+      .underline-animation:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #4b5563;
+        transition: width 0.3s ease;
+      }
+      .underline-animation:hover:after {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-white text-gray-800 dot-pattern">
+    <div class="container mx-auto px-4 py-12 max-w-6xl">
+      <!-- Header -->
+      <header class="flex justify-between items-center mb-16">
+        <div class="text-2xl font-bold text-gray-700">devPortfolio</div>
+        <nav class="hidden md:flex space-x-8">
+          <a href="#about" class="underline-animation pb-1">About</a>
+          <a href="#skills" class="underline-animation pb-1">Skills</a>
+          <a href="#projects" class="underline-animation pb-1">Projects</a>
+          <a href="#contact" class="underline-animation pb-1">Contact</a>
+        </nav>
+        <button class="md:hidden">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="mb-24">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-8 md:mb-0">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+              Hi, I'm
+              <span
+                class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 animate-gradient"
+                >Raphael</span
+              >
+            </h1>
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-600">
+              Lead Software Developer at ThoughtWorks
+            </h2>
+            <p class="text-lg mb-8 text-gray-600 leading-relaxed">
+              Full-stack developer with 9 years of experience, specializing in
+              JavaScript and modern web technologies. Passionate about teaching,
+              AI, and creating impactful solutions.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#contact"
+                class="bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded-md transition"
+                >Get in touch</a
+              >
+              <a
+                href="#projects"
+                class="border border-gray-700 text-gray-700 hover:bg-gray-50 px-6 py-3 rounded-md transition"
+                >View work</a
+              >
+            </div>
+          </div>
+          <div class="hidden md:w-1/2 md:flex md:justify-center">
+            <div
+              class="w-64 h-64 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full flex items-center justify-center shadow-lg"
+            >
+              <i
+                class="fas fa-brain text-6xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 animate-gradient"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="mb-24">
+        <h2 class="text-3xl font-bold mb-8 text-center">About Me</h2>
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/3 mb-6 md:mb-0 flex justify-center">
+              <img
+                src="https://media.licdn.com/dms/image/v2/D4E03AQHWWrX4_hplww/profile-displayphoto-shrink_800_800/B4EZVMuKy1HMAc-/0/1740748927368?e=1749081600&v=beta&t=VwktDTjYHM5I01dxWPATpHdWTQe1-aG-gzDguiS-wsU"
+                alt="Raphael Kieling"
+                class="rounded-full w-48 h-48"
+              />
+            </div>
+            <div class="md:w-2/3 md:pl-8">
+              <p class="mb-4 text-gray-600 leading-relaxed">
+                With over 9 years of experience in software development, I
+                started my journey before college with JavaScript and have since
+                expanded my expertise to include Python, Java, PHP, Kotlin,
+                Flutter, and various other technologies across both Backend and
+                Frontend development.
+              </p>
+              <p class="mb-4 text-gray-600 leading-relaxed">
+                I'm passionate about teaching and sharing knowledge, having
+                conducted JavaScript and programming classes for aspiring
+                developers. Recently, I completed my postgraduate studies in
+                <span
+                  class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 animate-gradient"
+                  >Artificial Intelligence</span
+                >
+                and actively share this knowledge within my teams.
+              </p>
+
+              <p class="mb-4 text-gray-600 leading-relaxed">
+                Currently studying and applying Modern Prompt Engineering
+                concepts like MCP (Multi-Persona Conversations) and RAG
+                (Retrieval-Augmented Generation) to enhance
+                <span
+                  class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 animate-gradient"
+                  >AI</span
+                >-driven solutions.
+              </p>
+              <div class="flex flex-wrap gap-4 mt-6">
+                <div class="bg-gray-50 px-4 py-2 rounded-md text-gray-700">
+                  <i class="fas fa-graduation-cap mr-2"></i> AI Postgraduate
+                </div>
+                <div class="bg-gray-50 px-4 py-2 rounded-md text-gray-700">
+                  <i class="fas fa-users mr-2"></i> Team Leader
+                </div>
+                <div class="bg-gray-50 px-4 py-2 rounded-md text-gray-700">
+                  <i class="fas fa-chalkboard-teacher mr-2"></i> Tech Educator
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="mb-24">
+        <h2 class="text-3xl font-bold mb-12 text-center">Technical Skills</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Frontend Skills -->
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 card-hover"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-code text-gray-700 text-xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold">Frontend</h3>
+            </div>
+            <div class="space-y-3">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">React</span>
+                  <span class="text-sm text-gray-500">95%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div
+                    class="bg-gray-700 h-2 rounded-full"
+                    style="width: 95%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">Vue</span>
+                  <span class="text-sm text-gray-500">90%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div
+                    class="bg-gray-700 h-2 rounded-full"
+                    style="width: 90%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">Angular</span>
+                  <span class="text-sm text-gray-500">85%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div
+                    class="bg-gray-700 h-2 rounded-full"
+                    style="width: 85%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend Skills -->
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 card-hover"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-server text-gray-700 text-xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold">Backend</h3>
+            </div>
+            <div class="space-y-3">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">JavaScript/Node.js</span>
+                  <span class="text-sm text-gray-500">95%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div
+                    class="bg-gray-700 h-2 rounded-full"
+                    style="width: 95%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">Python</span>
+                  <span class="text-sm text-gray-500">85%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div
+                    class="bg-gray-700 h-2 rounded-full"
+                    style="width: 85%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">Golang</span>
+                  <span class="text-sm text-gray-500">80%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div
+                    class="bg-gray-700 h-2 rounded-full"
+                    style="width: 80%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile & AI Skills -->
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 card-hover"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-brain text-gray-700 text-xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold">AI & Machine Learning</h3>
+            </div>
+            <div class="space-y-3">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">Machine Learning</span>
+                  <span class="text-sm text-gray-500">75%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div
+                    class="bg-gray-700 h-2 rounded-full"
+                    style="width: 85%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">Deep Learning</span>
+                  <span class="text-sm text-gray-500">70%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div
+                    class="bg-gray-700 h-2 rounded-full"
+                    style="width: 80%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium"
+                    >Natural Language Processing</span
+                  >
+                  <span class="text-sm text-gray-500">75%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div
+                    class="bg-gray-700 h-2 rounded-full"
+                    style="width: 75%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="mb-24">
+        <h2 class="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- DevPair -->
+          <div
+            class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 card-hover"
+          >
+            <div
+              class="h-48 bg-gradient-to-r from-gray-100 to-gray-200 flex items-center justify-center"
+            >
+              <i class="fas fa-users-rectangle text-5xl text-gray-700"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">DevPair</h3>
+              <p class="text-gray-600 mb-4">
+                A tool to facilitate remote pair programming sessions, making
+                git workflows easier during pair programming.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
+                  >Python</span
+                >
+                <span
+                  class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
+                  >Git</span
+                >
+                <span
+                  class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
+                  >CLI</span
+                >
+              </div>
+              <a
+                href="https://github.com/raphaelkieling/devpair"
+                target="_blank"
+                class="text-gray-700 font-medium flex items-center"
+              >
+                View on GitHub <i class="fab fa-github ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- DoctorEnv -->
+          <div
+            class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 card-hover"
+          >
+            <div
+              class="h-48 bg-gradient-to-r from-gray-100 to-gray-200 flex items-center justify-center"
+            >
+              <i class="fas fa-stethoscope text-5xl text-gray-700"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">DoctorEnv</h3>
+              <p class="text-gray-600 mb-4">
+                A checklist tool that helps developers identify and fix
+                environment issues automatically.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
+                  >JavaScript</span
+                >
+                <span
+                  class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
+                  >Node.js</span
+                >
+                <span
+                  class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
+                  >CLI</span
+                >
+              </div>
+              <a
+                href="https://github.com/raphaelkieling/doctorenv"
+                target="_blank"
+                class="text-gray-700 font-medium flex items-center"
+              >
+                View on GitHub <i class="fab fa-github ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Terun -->
+          <div
+            class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 card-hover"
+          >
+            <div
+              class="h-48 bg-gradient-to-r from-gray-100 to-gray-200 flex items-center justify-center"
+            >
+              <i class="fas fa-terminal text-5xl text-gray-700"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Terun</h3>
+              <p class="text-gray-600 mb-4">
+                A terminal-based tool for running and managing multiple commands
+                in parallel with a beautiful interface.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
+                  >Go</span
+                >
+                <span
+                  class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
+                  >Terminal</span
+                >
+                <span
+                  class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
+                  >CLI</span
+                >
+              </div>
+              <a
+                href="https://github.com/raphaelkieling/terun"
+                target="_blank"
+                class="text-gray-700 font-medium flex items-center"
+              >
+                View on GitHub <i class="fab fa-github ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Anki RPG -->
+          <div
+            class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 card-hover"
+          >
+            <div
+              class="h-48 bg-gradient-to-r from-gray-100 to-gray-200 flex items-center justify-center"
+            >
+              <i class="fas fa-gamepad text-5xl text-gray-700"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Anki RPG</h3>
+              <p class="text-gray-600 mb-4">
+                An Anki add-on that transforms your study experience into an RPG
+                game, making learning more engaging.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
+                  >Python</span
+                >
+                <span
+                  class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
+                  >Anki</span
+                >
+                <span
+                  class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
+                  >Gaming</span
+                >
+              </div>
+              <a
+                href="https://github.com/raphaelkieling/addon-anki-rpg"
+                target="_blank"
+                class="text-gray-700 font-medium flex items-center"
+              >
+                View on GitHub <i class="fab fa-github ml-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-10">
+          <a
+            href="https://github.com/raphaelkieling"
+            target="_blank"
+            class="inline-flex items-center px-6 py-3 border border-gray-700 text-gray-700 rounded-md hover:bg-gray-50 transition"
+          >
+            View all projects <i class="fab fa-github ml-2"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="mb-16">
+        <h2 class="text-3xl font-bold mb-12 text-center">Get In Touch</h2>
+        <div
+          class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 max-w-3xl mx-auto"
+        >
+          <a
+            href="mailto:raphaelkieling98@gmail.com"
+            class="w-full bg-gray-800 hover:bg-gray-900 text-white py-3 px-6 rounded-md transition inline-block text-center"
+          >
+            Send Email
+          </a>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="pt-12 border-t border-gray-200">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-4 md:mb-0">
+            <div class="text-xl font-bold text-gray-700">Raphael Kieling</div>
+            <p class="text-gray-600 mt-1">
+              Lead Software Developer | AI Enthusiast
+            </p>
+          </div>
+          <div class="flex space-x-6">
+            <a
+              href="https://github.com/raphaelkieling"
+              class="text-gray-500 hover:text-gray-700 transition"
+            >
+              <i class="fab fa-github text-xl"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/raphael-kieling/"
+              class="text-gray-500 hover:text-gray-700 transition"
+            >
+              <i class="fab fa-linkedin text-xl"></i>
+            </a>
+            <a
+              href="https://x.com/raphaelkieling"
+              class="text-gray-500 hover:text-gray-700 transition"
+            >
+              <i class="fab fa-twitter text-xl"></i>
+            </a>
+          </div>
+        </div>
+        <div class="mt-8 text-center text-gray-500 text-sm">
+          © 2024 Raphael Kieling. All rights reserved.
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Simple JavaScript for mobile menu toggle (could be expanded)
+      document.querySelector("button").addEventListener("click", function () {
+        // This would toggle a mobile menu in a real implementation
+        alert("Mobile menu would open here in a complete implementation");
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
